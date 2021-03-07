@@ -1,6 +1,5 @@
-#  essential com record
-## chapter 1
-第一章通过如何构造独立的二进制组件，通过他来引出com的基本结构。  
+# chapter 1 COM是更好的C++
+第一章介绍了如何一步步构造独立的二进制组件，通过他来引出com的基本结构。  
 
 1. 抽象基类作为二进制接口
 2. 关于虚类  
@@ -98,7 +97,7 @@ public:
    virtual void Release()=0;  //counter--  if(counter==0) delete this
 };
 ```
-客户端使用时，需要遵循两条规则，1）接口指针被复制时，调用AddRef;2)接口指针不再使用时，调用Release.
+客户端使用时，需要遵循两条规则，1）接口指针被复制时，调用AddRef;2)接口指针不再使用时，调用Release.  
 9.  总结
     第一章通过一个简单的类，将接口和实现分离，创建和实践分离，通过DynamicCast实现运行时接口查询，整个过程是**组件对象模型**(**COM**,componet object model)的的设计过程
 
